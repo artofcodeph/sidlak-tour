@@ -1,0 +1,17 @@
+<h1>Tour Guide List</h1>
+
+{% if tour_guides %}
+
+{% for tour_guide in tour_guides %}
+<p>{{ tour_guide.full_name }}</p>
+<p>{{ tour_guide.contact_number }}</p>
+<p>{{ tour_guide.area }}</p>
+<p>{{ tour_guide.specialization }}</p>
+<hr>
+{% endfor %}
+
+{% else %}
+
+<p>No Tour Guide on Record</p>
+
+{% endif %}
